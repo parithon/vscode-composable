@@ -1,0 +1,14 @@
+{
+  "name": "vscode-composable",
+  "publisher": "parithon",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.31.1"
+  },
+  "scripts": {
+    "vscode:prepublish": "cd componentone && npm run update-vscode && cd .. && npm run compile",
+    "compile": "tsc -b",
+    "watch": "tsc -b -w",
+    "postinstall": "cd componentone && npm install && cd ../componenttwo && npm install && cd ../base && npm install && cd .."
+  }
+}
